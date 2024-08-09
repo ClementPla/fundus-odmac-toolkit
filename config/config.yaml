@@ -1,0 +1,38 @@
+define: &img_shape [512, 512]
+
+logger:
+  project: OpticDisk-Macula-Segmentation
+
+data:
+  paths:
+    eyepacs: /home/clement/Documents/data/OpticDisk/EYEPACS/
+    aptos: /home/clement/Documents/data/OpticDisk/APTOS/
+    idrid: /home/clement/Documents/data/OpticDisk/IDRID/
+    ddr: /home/clement/Documents/data/OpticDisk/DDR/
+
+  dataset:
+    img_size: *img_shape
+    batch_size: 48
+    valid_size: 0.2
+    num_workers: auto
+    data_augmentation_type: heavy
+    use_cache: False
+    cache_option: memory
+training:
+  lr: 0.00003
+  weight_decay: 0.0005
+
+model:
+  architecture: unet
+  encoder: maxvit_small_tf_512
+
+^trainer:
+  accumulate_grad_batches: 4
+  accelerator: gpu
+  deterministic: False
+  devices: auto
+  max_epochs: 400
+  precision: 16-mixed
+  check_val_every_n_epoch: 1
+  num_sanity_val_steps: 2
+  fast_dev_run: False

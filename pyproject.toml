@@ -1,0 +1,42 @@
+[project]
+name = "fundus_odmac_toolkit"
+version = "0.1.0"
+description = "A library for segmenting optic disk and macula in fundus images"
+dependencies = [
+    "albumentations",
+    "appdirs",
+    "torch",
+    "torchvision",
+    "numpy",
+    "opencv-python-headless",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+    "scipy",
+    "tqdm",
+    "pytorch-lightning",
+    "nntools @ git+https://github.com/ClementPla/NNTools@attrs_dataset",
+    "fundus-data-toolkit @ git+https://github.com/ClementPla/fundus-data-toolkit", 
+    "attrs",
+    "timm",
+    "wandb",
+    "jaxtyping",
+]
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = ["black", "ruff", "pre-commit"]
+
+notebook = ["ipykernel", "matplotlib"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fundus_odmac_toolkit"]
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+select = ["E", "F", "I", "RUF", "TCH"]
+fixable = ["I", "RUF100", "TCH"]
+fix = true
