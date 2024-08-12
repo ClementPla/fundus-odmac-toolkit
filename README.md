@@ -27,9 +27,15 @@ from fundus_odmac_toolkit.models.segmentation import segment
 
 filepath = 'my_folder/my_image.(jpeg/png/...)'
 image = open_image(filepath)
-pred = segment(image) # You don't need to resize, crop or normalize the image as it will be done automatically.
+pred = segment(image) 
+# You don't need to resize, crop or normalize 
+# the image as it will be done automatically.
 
-# pred is a post-softmax output of size 3xHxW. First channel: Background score, Second channel: Optic Disk score, Last channel: Macula score.
+
+# pred is a post-softmax output of size 3xHxW. 
+# First channel: Background score
+# Second channel: Optic Disk score
+# Last channel: Macula score.
 
 ```
 
