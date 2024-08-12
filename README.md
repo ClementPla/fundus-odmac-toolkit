@@ -30,7 +30,10 @@ image = open_image(filepath)
 pred = segment(image) 
 # You don't need to resize, crop or normalize 
 # the image as it will be done automatically.
-
+# On the first call of the function, the model's weight will be automatically downloaded.
+# You can change the architecture/encoder by calling:
+pred = segment(image, arch='unetplusplus', encoder='seresnet50')
+# Call fundus_odmac_toolkit.models.list_models() for a list of all available models.
 
 # pred is a post-softmax output of size 3xHxW. 
 # First channel: Background score
