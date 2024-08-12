@@ -38,7 +38,7 @@ Transforms: Horizontal Flip and Rotations (0, 90, 180 and 270)
 | UNet++       	| mobilenetv3_small_050 	| 86.04%        	|
 
 
-[The UNet-maxvit_small_tf_512 ranks second in the challenge leaderboard](https://idrid.grand-challenge.org/Leaderboard/)
+The UNet-maxvit_small_tf_512 would rank second in the [official leaderboard](https://idrid.grand-challenge.org/Leaderboard/)
 
 ### Without Test Time Augmentation
 
