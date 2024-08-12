@@ -97,4 +97,6 @@ All the models (except UNet++ with mobilenetv3_small_050) would rank at the seco
 
 
 The UNet-maxvit_small_tf_512 obtains a MSE of **47.10** (48.12 with TTA), which ranks first in the [official leaderboard](https://idrid.grand-challenge.org/Leaderboard/).
+
+
 However, we filter images where the macula was not detected (8/103), which artificially boost our performance (see the associated [notebook](notebooks/idrid_eval.ipynb))
