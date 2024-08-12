@@ -73,6 +73,7 @@ def segment(
             pre_segmentation_features = model.decoder(*features)
             pred = model.segmentation_head(pre_segmentation_features)
             pred = F.softmax(pred, 1)
+            pred = F.interpolate(pred, (image_resolution, image_resolution), mode="bilinear", align_corners=False)
         if return_features or return_decoder_features:
             assert (
                 not reverse_autofit

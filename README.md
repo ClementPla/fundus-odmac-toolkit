@@ -16,3 +16,18 @@ or
 ```bash
 pip install -e .
 ```
+
+## Benchmarck
+
+### IDRiD Segmentation Challenge (Optic Disk)
+
+| Architecture 	|        Encoder        	| Jaccard Index 	|
+|:------------:	|:---------------------:	|:-------------:	|
+| UNet         	| seresnet50            	| 92.74%        	|
+| UNet         	| mobilevitv2_100       	| 92.24%        	|
+| UNet         	| mobilenetv3_small_050 	| 84.29%        	|
+| UNet         	| maxvit_tiny_tf_512    	| 91.80%        	|
+| UNet         	| maxvit_small_tf_512   	| 93.17%        	|
+| UNet         	| maxvit_base_tf_512    	| 87.20%        	|
+| UNet++       	| seresnet50            	| 90.75%        	|
+| UNet++       	| mobilenetv3_small_050 	| 86.04%        	|

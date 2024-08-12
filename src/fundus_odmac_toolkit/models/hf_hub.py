@@ -26,6 +26,7 @@ def download_model(arch, encoder_name):
 def list_models():
     collection = get_collection(ROOT_HF + COLLECTION_ID)
     print("Architecture | \033[94m Encoder | \033[92m Variants")
+    all_models = []
     for item in collection.items:
         if item.item_type == "model":
             name = item.item_id.split(ROOT_HF)[1]
@@ -37,3 +38,5 @@ def list_models():
                 "\033[94m" + encoder,
                 f"\033[92m ({len(branches)} variants)",
             )
+            all_models.append((arch, encoder))
+    return all_models
