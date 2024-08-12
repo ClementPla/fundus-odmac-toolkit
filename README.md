@@ -17,10 +17,12 @@ or
 pip install -e .
 ```
 
-## Benchmarck
+# Benchmarck
 
-### IDRiD Segmentation Challenge (Optic Disk)
+## IDRiD Segmentation Challenge (Optic Disk)
 
+### With Test Time Augmentation
+Transforms: Horizontal Flip and Rotations (0, 90, 180 and 270)
 
 | Architecture 	|        Encoder        	| Jaccard Index 	|
 |:------------:	|:---------------------:	|:-------------:	|
@@ -32,3 +34,17 @@ pip install -e .
 | UNet         	| maxvit_base_tf_512    	| 87.20%        	|
 | UNet++       	| seresnet50            	| 90.75%        	|
 | UNet++       	| mobilenetv3_small_050 	| 86.04%        	|
+
+
+### Without Test Time Augmentation
+
+| Architecture 	|        Encoder        	| Jaccard Index 	|
+|:------------:	|:---------------------:	|:-------------:	|
+| UNet         	| seresnet50            	| 92.03%        	|
+| UNet         	| mobilevitv2_100       	| 92.07%        	|
+| UNet         	| mobilenetv3_small_050 	| 89.13%        	|
+| UNet         	| maxvit_tiny_tf_512    	| **92.27%**        |
+| UNet         	| maxvit_small_tf_512   	| 92.84%        	|
+| UNet         	| maxvit_base_tf_512    	| 88.19%        	|
+| UNet++       	| seresnet50            	| 88.92%        	|
+| UNet++       	| mobilenetv3_small_050 	| 85.86%        	|
