@@ -58,7 +58,7 @@ The UNet-maxvit_small_tf_512 would rank second in the [official leaderboard](htt
 
 | Architecture 	|        Encoder        	|  MSE  	|
 |:------------:	|:---------------------:	|:-----:	|
-| UNet         	| seresnet50            	| 25.73 	|
+| UNet         	| seresnet50            	| **25.73**	|
 | UNet         	| mobilevitv2_100       	| 28.26 	|
 | UNet         	| mobilenetv3_small_050 	| 34.72 	|
 | UNet         	| maxvit_tiny_tf_512    	| 30.17 	|
