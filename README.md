@@ -18,7 +18,7 @@ pip install -e .
 ```
 
 # Benchmarck
-
+You can find below the benchmark obtained with the different models. In short summary, we recommend using the UNet with the maxvit_small_tf_512 encoder (which are therefore set as default values).
 ## IDRiD Segmentation Challenge (Optic Disk)
 
 *Note that we didn't use the segmentation mask provided by the IDRiD's team for training.*

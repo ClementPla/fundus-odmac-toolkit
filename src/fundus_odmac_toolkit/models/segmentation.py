@@ -19,7 +19,7 @@ EncoderModel = Literal["resnet34"]
 def segment(
     image: np.ndarray,
     arch: Architecture = "unet",
-    encoder: EncoderModel = "maxvit_tiny_tf_512",
+    encoder: EncoderModel = "maxvit_small_tf_512",
     image_resolution=512,
     autofit_resolution=True,
     reverse_autofit=True,
