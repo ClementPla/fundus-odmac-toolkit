@@ -21,6 +21,8 @@ pip install -e .
 
 ## IDRiD Segmentation Challenge (Optic Disk)
 
+*Note that we didn't use the segmentation mask provided by the IDRiD's team for training.*
+
 ### With Test Time Augmentation
 Transforms: Horizontal Flip and Rotations (0, 90, 180 and 270)
 
@@ -35,6 +37,8 @@ Transforms: Horizontal Flip and Rotations (0, 90, 180 and 270)
 | UNet++       	| seresnet50            	| 90.75%        	|
 | UNet++       	| mobilenetv3_small_050 	| 86.04%        	|
 
+
+[The UNet-maxvit_small_tf_512 ranks second in the challenge leaderboard](https://idrid.grand-challenge.org/Leaderboard/)
 
 ### Without Test Time Augmentation
 
