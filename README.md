@@ -17,6 +17,22 @@ or
 pip install -e .
 ```
 
+## Usage
+
+To use these models, please consult the [example notebook](notebooks/test_models.ipynb). You don't have to download the models. We rely on HuggingFace for that.
+```python
+
+from fundus_data_toolkit.functional import open_image
+from fundus_odmac_toolkit.models.segmentation import segment
+
+filepath = 'my_folder/my_image.(jpeg/png/...)'
+image = open_image(filepath)
+pred = segment(image) # You don't need to resize, crop or normalize the image as it will be done automatically.
+
+# pred is a post-softmax output of size 3xHxW. First channel: Background score, Second channel: Optic Disk score, Last channel: Macula score.
+
+```
+
 # Benchmarck
 You can find below the benchmark obtained with the different models. In short summary, we recommend using the UNet with the maxvit_small_tf_512 encoder (which are therefore set as default values).
 ## IDRiD Segmentation Challenge (Optic Disk)
