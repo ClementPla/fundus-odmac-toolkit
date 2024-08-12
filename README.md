@@ -71,5 +71,5 @@ The UNet-maxvit_small_tf_512 would rank second in the [official leaderboard](htt
 ## IDRiD Localization Challenge (Fovea)
 
 
-The UNet-maxvit_small_tf_512 obtains a MSE of **47.10**, which ranks first in the [official leaderboard](https://idrid.grand-challenge.org/Leaderboard/).
-However, we filter images were the macula was not detected, which artificially boost our performance (see the associated [notebook](notebooks/idrid_eval.ipynb))
+The UNet-maxvit_small_tf_512 obtains a MSE of **47.10** (48.12 with TTA), which ranks first in the [official leaderboard](https://idrid.grand-challenge.org/Leaderboard/).
+However, we filter images were the macula was not detected (8/103), which artificially boost our performance (see the associated [notebook](notebooks/idrid_eval.ipynb))
