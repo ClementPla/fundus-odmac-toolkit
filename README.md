@@ -92,7 +92,7 @@ The UNet-maxvit_small_tf_512 would rank second in the [official leaderboard](htt
 | UNet++       	| seresnet50            	| 28.43 	|
 | UNet++       	| mobilenetv3_small_050 	| 42.44 	|
 
-
+All the models (except UNet++ with mobilenetv3_small_050) would rank at the second position of the official leaderboard. 
 ## IDRiD Localization Challenge (Fovea)
 
 
