@@ -51,7 +51,7 @@ You can find below the benchmark obtained with the different models. In short su
 ### With Test Time Augmentation
 Transforms: Horizontal Flip and Rotations (0, 90, 180 and 270)
 
-| Architecture 	|        Encoder        	| Jaccard Index 	|
+| Architecture 	|        Encoder        	| Jaccard Index (IoU)|
 |:------------:	|:---------------------:	|:-------------:	|
 | UNet         	| seresnet50            	| 92.74%        	|
 | UNet         	| mobilevitv2_100       	| 92.24%        	|
@@ -67,7 +67,7 @@ The UNet-maxvit_small_tf_512 would rank second in the [official leaderboard](htt
 
 ### Without Test Time Augmentation
 
-| Architecture 	|        Encoder        	| Jaccard Index 	|
+| Architecture 	|        Encoder        	| Jaccard Index (IoU)|
 |:------------:	|:---------------------:	|:-------------:	|
 | UNet         	| seresnet50            	| 92.03%        	|
 | UNet         	| mobilevitv2_100       	| 92.07%        	|
