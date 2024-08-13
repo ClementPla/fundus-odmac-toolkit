@@ -21,6 +21,7 @@ dependencies = [
     "timm",
     "wandb",
     "jaxtyping",
+    "torchseg"
 ]
 readme = "README.md"
 

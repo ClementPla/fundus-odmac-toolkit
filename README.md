@@ -100,3 +100,18 @@ The UNet-maxvit_small_tf_512 obtains a MSE of **47.10** (48.12 with TTA), which 
 
 
 However, we filter images where the macula was not detected (8/103), which artificially boost our performance (see the associated [notebook](notebooks/idrid_eval.ipynb))
+
+
+# RIGA Dataset (Magrabia) - OD segmentation
+
+
+| Architecture 	|        Encoder        	| Jaccard Index (IOU) 	|
+|:------------:	|:---------------------:	|:-------------------:	|
+| UNet         	| seresnet50            	| 87.78%              	|
+| UNet         	| mobilevitv2_100       	| 87.30%              	|
+| UNet         	| mobilenetv3_small_050 	| 86.41%              	|
+| UNet         	| maxvit_tiny_tf_512    	| 87.17%              	|
+| UNet         	| maxvit_small_tf_512   	| 86.54%              	|
+| UNet         	| maxvit_base_tf_512    	| 80.66%              	|
+| UNet++       	| seresnet50            	| 81.95%              	|
+| UNet++       	| mobilenetv3_small_050 	| 82.62%              	|
