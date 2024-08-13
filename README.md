@@ -115,3 +115,17 @@ However, we filter images where the macula was not detected (8/103), which artif
 | UNet         	| maxvit_base_tf_512    	| 80.66%              	|
 | UNet++       	| seresnet50            	| 81.95%              	|
 | UNet++       	| mobilenetv3_small_050 	| 82.62%              	|
+
+# RIGA Dataset (MESSIDOR) - OD segmentation
+
+
+| Architecture 	|        Encoder        	| Jaccard Index (IOU) 	|
+|:------------:	|:---------------------:	|:-------------------:	|
+| UNet         	| seresnet50            	| 87.16%              	|
+| UNet         	| mobilevitv2_100       	| -                   	|
+| UNet         	| mobilenetv3_small_050 	| -                   	|
+| UNet         	| maxvit_tiny_tf_512    	| -                   	|
+| UNet         	| maxvit_small_tf_512   	| 86.54%              	|
+| UNet         	| maxvit_base_tf_512    	| 78.00%                |
+| UNet++       	| seresnet50            	| -                   	|
+| UNet++       	| mobilenetv3_small_050 	| -                   	|
