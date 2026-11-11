@@ -1,7 +1,7 @@
 define: &img_shape [512, 512]
 
 logger:
-  project: OpticDisk-Macula-Segmentation
+  project: OpticDisk-Macula-Segmentation-v2
 
 data:
   paths:
@@ -12,26 +12,29 @@ data:
 
   dataset:
     img_size: *img_shape
-    batch_size: 48
+    batch_size: 8
     valid_size: 0.2
     num_workers: auto
     data_augmentation_type: heavy
     use_cache: False
     cache_option: memory
 training:
-  lr: 0.00003
-  weight_decay: 0.0005
+  lr: 0.0003          # decoder + segmentation head
+  encoder_lr: 0.00003 # pretrained encoder
+  weight_decay: 0.01
+  warmup_ratio: 0.05  # fraction of steps, then cosine decay to 0
+  ce_weight: 1.0      # loss = Dice + ce_weight * cross-entropy
 
 model:
   architecture: unet
   encoder: maxvit_small_tf_512
 
 ^trainer:
-  accumulate_grad_batches: 4
+  accumulate_grad_batches: 1
   accelerator: gpu
   deterministic: False
   devices: auto
-  max_epochs: 400
+  max_epochs: 300
   precision: 16-mixed
   check_val_every_n_epoch: 1
   num_sanity_val_steps: 2

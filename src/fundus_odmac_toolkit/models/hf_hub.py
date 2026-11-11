@@ -4,6 +4,9 @@ from huggingface_hub import PyTorchModelHubMixin, get_collection, list_repo_refs
 
 ROOT_HF = "ClementP/fundus-odmac-segmentation-"
 COLLECTION_ID = "66b663ed4e30b920790fd4c7"
+# Branch of the model repos to load. "v2": retrained in 2026 (Dice + cross-entropy, tuned optimisation);
+# "main": original 2024 weights.
+DEFAULT_REVISION = "v2"
 
 
 class HuggingFaceModel(PyTorchModelHubMixin, nn.Module):
@@ -18,8 +21,10 @@ class HuggingFaceModel(PyTorchModelHubMixin, nn.Module):
         )
 
 
-def download_model(arch, encoder_name):
-    model = HuggingFaceModel.from_pretrained(f"{ROOT_HF}{arch}-{encoder_name}", arch=arch, encoder=encoder_name).model
+def download_model(arch, encoder_name, revision=DEFAULT_REVISION):
+    model = HuggingFaceModel.from_pretrained(
+        f"{ROOT_HF}{arch}-{encoder_name}", arch=arch, encoder=encoder_name, revision=revision
+    ).model
     return model
 
 

@@ -1,0 +1,40 @@
+{"benchmark": "idrid_od_iou", "arch": "unet", "encoder": "seresnet50", "value": 92.49944686889648, "n": 27}
+{"benchmark": "idrid_od_distance", "arch": "unet", "encoder": "seresnet50", "value": 26.055624575777536, "missed": 0, "n": 103}
+{"benchmark": "idrid_fovea_distance", "arch": "unet", "encoder": "seresnet50", "value": 413.91653050317115, "missed": 0, "n": 103}
+{"benchmark": "idrid_od_iou", "arch": "unet", "encoder": "maxvit_tiny_tf_512", "value": 92.69209504127502, "n": 27}
+{"benchmark": "idrid_od_distance", "arch": "unet", "encoder": "maxvit_tiny_tf_512", "value": 26.773855292078007, "missed": 0, "n": 103}
+{"benchmark": "idrid_fovea_distance", "arch": "unet", "encoder": "maxvit_tiny_tf_512", "value": 49.94237289727702, "missed": 7, "n": 103}
+{"benchmark": "idrid_od_iou", "arch": "unet", "encoder": "maxvit_base_tf_512", "value": 88.97197842597961, "n": 27}
+{"benchmark": "idrid_od_distance", "arch": "unet", "encoder": "maxvit_base_tf_512", "value": 22.06872810884936, "missed": 0, "n": 103}
+{"benchmark": "idrid_fovea_distance", "arch": "unet", "encoder": "maxvit_base_tf_512", "value": 267.99806738871837, "missed": 0, "n": 103}
+{"benchmark": "idrid_od_iou", "arch": "unet", "encoder": "mobilevitv2_100", "value": 92.65580177307129, "n": 27}
+{"benchmark": "idrid_od_distance", "arch": "unet", "encoder": "mobilevitv2_100", "value": 26.118930351824726, "missed": 0, "n": 103}
+{"benchmark": "idrid_fovea_distance", "arch": "unet", "encoder": "mobilevitv2_100", "value": 55.91540907811264, "missed": 8, "n": 103}
+{"benchmark": "idrid_od_iou", "arch": "unetplusplus", "encoder": "seresnet50", "value": 89.7655725479126, "n": 27}
+{"benchmark": "idrid_od_distance", "arch": "unetplusplus", "encoder": "seresnet50", "value": 31.123678184266613, "missed": 0, "n": 103}
+{"benchmark": "idrid_fovea_distance", "arch": "unetplusplus", "encoder": "seresnet50", "value": 178.59810296413852, "missed": 0, "n": 103}
+{"benchmark": "idrid_od_iou", "arch": "unet", "encoder": "mobilenetv3_small_050", "value": 88.65124583244324, "n": 27}
+{"benchmark": "idrid_od_distance", "arch": "unet", "encoder": "mobilenetv3_small_050", "value": 28.030021652698373, "missed": 0, "n": 103}
+{"benchmark": "idrid_fovea_distance", "arch": "unet", "encoder": "mobilenetv3_small_050", "value": 71.21199917998244, "missed": 15, "n": 103}
+{"benchmark": "idrid_od_iou", "arch": "unetplusplus", "encoder": "mobilenetv3_small_050", "value": 84.18689966201782, "n": 27}
+{"benchmark": "idrid_od_distance", "arch": "unetplusplus", "encoder": "mobilenetv3_small_050", "value": 42.50140357174209, "missed": 0, "n": 103}
+{"benchmark": "idrid_fovea_distance", "arch": "unetplusplus", "encoder": "mobilenetv3_small_050", "value": 1265.0934438984202, "missed": 0, "n": 103}
+{"benchmark": "idrid_od_iou", "arch": "unet", "encoder": "maxvit_small_tf_512", "value": 92.98760294914246, "n": 27}
+{"benchmark": "idrid_od_distance", "arch": "unet", "encoder": "maxvit_small_tf_512", "value": 26.93904140421813, "missed": 0, "n": 103}
+{"benchmark": "idrid_fovea_distance", "arch": "unet", "encoder": "maxvit_small_tf_512", "value": 60.39667814829153, "missed": 6, "n": 103}
+{"benchmark": "riga_magrabia_od_iou", "arch": "unet", "encoder": "seresnet50", "value": 87.68032789230347, "n": 95}
+{"benchmark": "riga_magrabia_od_iou", "arch": "unet", "encoder": "maxvit_tiny_tf_512", "value": 87.20629215240479, "n": 95}
+{"benchmark": "riga_magrabia_od_iou", "arch": "unet", "encoder": "maxvit_base_tf_512", "value": 80.6308925151825, "n": 95}
+{"benchmark": "riga_magrabia_od_iou", "arch": "unet", "encoder": "mobilevitv2_100", "value": 87.19924092292786, "n": 95}
+{"benchmark": "riga_magrabia_od_iou", "arch": "unetplusplus", "encoder": "seresnet50", "value": 81.87704086303711, "n": 95}
+{"benchmark": "riga_magrabia_od_iou", "arch": "unet", "encoder": "mobilenetv3_small_050", "value": 86.3113522529602, "n": 95}
+{"benchmark": "riga_magrabia_od_iou", "arch": "unetplusplus", "encoder": "mobilenetv3_small_050", "value": 82.6409637928009, "n": 95}
+{"benchmark": "riga_magrabia_od_iou", "arch": "unet", "encoder": "maxvit_small_tf_512", "value": 86.49529814720154, "n": 95}
+{"benchmark": "riga_messidor_od_iou", "arch": "unet", "encoder": "seresnet50", "value": 88.14193606376648, "n": 460}
+{"benchmark": "riga_messidor_od_iou", "arch": "unet", "encoder": "maxvit_tiny_tf_512", "value": 88.09520602226257, "n": 460}
+{"benchmark": "riga_messidor_od_iou", "arch": "unet", "encoder": "maxvit_base_tf_512", "value": 79.61032390594482, "n": 460}
+{"benchmark": "riga_messidor_od_iou", "arch": "unet", "encoder": "mobilevitv2_100", "value": 87.90473937988281, "n": 460}
+{"benchmark": "riga_messidor_od_iou", "arch": "unetplusplus", "encoder": "seresnet50", "value": 80.79885840415955, "n": 460}
+{"benchmark": "riga_messidor_od_iou", "arch": "unet", "encoder": "mobilenetv3_small_050", "value": 85.03325581550598, "n": 460}
+{"benchmark": "riga_messidor_od_iou", "arch": "unetplusplus", "encoder": "mobilenetv3_small_050", "value": 77.4537205696106, "n": 460}
+{"benchmark": "riga_messidor_od_iou", "arch": "unet", "encoder": "maxvit_small_tf_512", "value": 85.68097949028015, "n": 460}

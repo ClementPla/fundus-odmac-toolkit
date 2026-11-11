@@ -1,9 +1,10 @@
+import argparse
 import os
 
 from fundus_odmac_toolkit.training.pl_module import ODMacLightningModule
 from nntools.utils import Config
 from pytorch_lightning import Trainer
-from pytorch_lightning.callbacks import EarlyStopping, LearningRateMonitor, ModelCheckpoint
+from pytorch_lightning.callbacks import LearningRateMonitor, ModelCheckpoint
 from pytorch_lightning.loggers import WandbLogger
 
 import wandb
@@ -12,7 +13,16 @@ wandb.require("core")
 
 
 def train():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--arch", help="Overrides model.architecture from the config")
+    parser.add_argument("--encoder", help="Overrides model.encoder from the config")
+    args = parser.parse_args()
+
     config = Config("config/config.yaml")
+    if args.arch:
+        config["model"]["architecture"] = args.arch
+    if args.encoder:
+        config["model"]["encoder"] = args.encoder
 
     project_name = config["logger"]["project"]
 
@@ -40,7 +50,6 @@ def train():
         logger=wandb_logger,
         callbacks=[
             checkpoint_callback,
-            EarlyStopping(monitor="Validation MulticlassJaccardIndex", patience=100, mode="max"),
             LearningRateMonitor(),
         ],
     )
